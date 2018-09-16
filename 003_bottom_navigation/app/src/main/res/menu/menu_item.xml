@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="Setting" android:id="@+id/setting" app:showAsAction="always"
+        android:icon="@drawable/ic_settings_black_24dp"/>
+    <item android:title="About" android:id="@+id/about" app:showAsAction="always"
+        android:icon="@drawable/ic_info_outline_black_24dp"/>
+    <item android:title="More" android:id="@+id/more" app:showAsAction="always" android:icon="@drawable/ic_more_vert_black_24dp">
+        <menu>
+            <item android:title="Option 1" android:id="@+id/opt1" app:showAsAction="never" android:icon="@drawable/ic_info_outline_black_24dp"/>
+            <item android:title="Option 2" android:id="@+id/opt2" app:showAsAction="never" android:icon="@drawable/ic_info_outline_black_24dp"/>
+        </menu>
+    </item>
+
+</menu>
