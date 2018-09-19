@@ -17,6 +17,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.mhdanh.helloworld.fragment.HomeFragment;
 import com.mhdanh.helloworld.fragment.MessageFragment;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        getSupportFragmentManager().beginTransaction().replace(R.id.mainFragment, new HomeFragment()).commit();
 
         initBottomNavigation();
     }
@@ -63,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.menu_bottom_navigation_home:
-                        Toast.makeText(getApplicationContext(), "Navigation home", Toast.LENGTH_SHORT).show();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.mainFragment, new HomeFragment()).commit();
                         return true;
                     case R.id.menu_bottom_navigation_setting:
                         Intent setting = new Intent(getApplicationContext(), SettingActivity.class);
